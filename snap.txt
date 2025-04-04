@@ -1,0 +1,6 @@
+code
+dbeaver-ce
+discord
+spotify
+docker
+

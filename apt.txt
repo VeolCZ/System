@@ -1,0 +1,12 @@
+i3
+pavucontrol
+mc
+lxappearance
+curl
+git
+python3-pip
+scrot
+htop
+nodejs
+npm
+vlc
