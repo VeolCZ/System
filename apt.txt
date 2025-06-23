@@ -1,6 +1,5 @@
 i3
 pavucontrol
-mc
 lxappearance
 curl
 git
@@ -10,3 +9,4 @@ htop
 nodejs
 npm
 vlc
+tmux
