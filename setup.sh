@@ -49,6 +49,7 @@ fi
     # echo "i3 configuration set up successfully."
 # else
     # echo "Error setting up i3 configuration. Please check the logs."
+    # exit 1
 # fi
 
 echo "--- Setting up dark theme ---"
@@ -57,15 +58,25 @@ if [ $? -eq 0 ]; then
     echo "Dark theme set up successfully."
 else
     echo "Error setting up dark theme. Please check the logs."
+    exit 1
 fi
 
 echo "--- Setting up keyboard with keyd ---"
 sudo bash "$SETUP_DIR/scripts/setup_keyd.sh"
 if [ $? -eq 0 ]; then
     echo "Keyd keyboard setup complete."
-    echo "A reboot might be necessary for keyd to fully take control of input devices."
 else
     echo "Error setting up keyd. Please check the logs."
+    exit 1
+fi
+
+echo "--- Installing nvidia-drivers ---"
+sudo bash "$SETUP_DIR/scripts/install_cuda_drivers.sh"
+if [ $? -eq 0 ]; then
+    echo "Cuda driver setup complete."
+else
+    echo "Error setting up keyd. Please check the logs."
+    exit 1
 fi
 
 echo "Ubuntu setup complete! You might need to reboot for all changes to take effect."
