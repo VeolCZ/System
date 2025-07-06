@@ -52,6 +52,16 @@ fi
     # exit 1
 # fi
 
+
+echo "--- Setting up tmux ---"
+sudo bash "$SETUP_DIR/scripts/setup_tmux.sh"
+if [ $? -eq 0 ]; then
+    echo "Tmux set up successfully."
+else
+    echo "Error setting up Tmux. Please check the logs."
+    exit 1
+fi
+
 echo "--- Setting up dark theme ---"
 sudo bash "$SETUP_DIR/scripts/setup_dark_theme.sh"
 if [ $? -eq 0 ]; then

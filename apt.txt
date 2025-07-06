@@ -10,3 +10,5 @@ nodejs
 npm
 vlc
 tmux
+ripgrep
+fd-find
