@@ -1,6 +1,5 @@
-code
 dbeaver-ce
 discord
 spotify
+code
 docker
-
