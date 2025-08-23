@@ -3,3 +3,4 @@ discord
 spotify
 code
 docker
+astral-uv

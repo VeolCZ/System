@@ -12,3 +12,4 @@ vlc
 tmux
 ripgrep
 fd-find
+brightnessctl
