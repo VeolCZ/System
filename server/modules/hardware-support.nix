@@ -1,9 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  ########################################
-  # NVIDIA GPU Support (optional)
-  ########################################
   hardware.opengl.enable = true;
 
   # Uncomment for NVIDIA machines:

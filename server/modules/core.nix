@@ -1,19 +1,13 @@
 { config, pkgs, ... }:
 
 {
-  ########################################
-  # Base System Settings
-  ########################################
-  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "server";
   time.timeZone = "CET";
 
-  ########################################
-  # Automatic Security Updates
-  ########################################
+
   system.autoUpgrade = {
     enable = true;
     allowReboot = true;
@@ -21,9 +15,7 @@
     channel = "https://channels.nixos.org/nixos-24.05";
   };
 
-  ########################################
-  # Automatic Garbage Collection
-  ########################################
+
   nix.gc = {
     automatic = true;
     dates = "weekly";

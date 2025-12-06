@@ -13,4 +13,6 @@
     ./modules/packages.nix
     ./modules/hardware-support.nix
   ];
+
+  nixpkgs.config.allowUnfree = true;
 }

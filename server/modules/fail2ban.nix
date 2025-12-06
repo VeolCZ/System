@@ -1,13 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
-  ########################################
-  # Fail2Ban
-  ########################################
   services.fail2ban = {
     enable = true;
     jails = {
-      sshd = ''
+      sshd = lib.mkForce ''
         enabled = true
         port = ssh
         backend = systemd

@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    vscode
+    # vscode
     git
     htop
     # nvtop

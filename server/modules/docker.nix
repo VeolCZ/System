@@ -1,9 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  ########################################
-  # Docker + Compose
-  ########################################
   virtualisation.docker = {
     enable = true;
     enableOnBoot = true;
