@@ -1,12 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  networking.hostName = "server";
-  time.timeZone = "CET";
-
+  networking.hostName = "mercury";
 
   system.autoUpgrade = {
     enable = true;
@@ -21,7 +16,8 @@
     dates = "weekly";
     options = "--delete-older-than 30d";
   };
-
+  programs.nix-ld.enable = true;
+  environment.shells = [ pkgs.bashInteractive ];
+  environment.systemPackages = [ pkgs.bashInteractive ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  system.stateVersion = "24.05";
 }

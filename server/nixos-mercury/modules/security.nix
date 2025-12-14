@@ -4,9 +4,6 @@
   networking.firewall.enable = true;
   security.apparmor.enable = true;
 
-  security.audit.enable = true;
-  security.auditd.enable = true;
-
   security.sudo.execWheelOnly = true;
 
   boot.kernel.sysctl = {

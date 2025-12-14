@@ -2,10 +2,10 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # vscode
     git
     htop
-    # nvtop
+    nvtopPackages.full
+    cudaPackages.cudatoolkit
   ];
 
   services.cron.enable = false;

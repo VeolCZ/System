@@ -1,12 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  programs.zsh.enable = true;
-
   users.users.veol = {
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" ];
-    shell = pkgs.zsh;
+    shell = pkgs.bashInteractive;
     # Set password manually: sudo passwd veol
     initialPassword = "password";
     openssh.authorizedKeys.keys = [
